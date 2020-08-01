@@ -244,6 +244,7 @@ body {
 .radio-group>label {
     margin-right: 10px;
     cursor: pointer;
+    display: none;
 }
 .radio-group>label>input {
     vertical-align: -2px;
