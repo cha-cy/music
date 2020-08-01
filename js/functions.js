@@ -270,7 +270,7 @@ $(function(){
     
     // 图片加载失败处理
     $('img').error(function(){
-        $(this).attr('src', 'images/player_cover.png');
+        $(this).attr('src', '//cdn.jsdelivr.net/gh/saigaocy/music///cdn.jsdelivr.net/gh/saigaocy/music/images/player_cover.png');
     });
     
     // 初始化播放列表
@@ -324,10 +324,6 @@ function searchBox() {
     '    </div>' + 
     '    <div class="radio-group" id="music-source">' + 
     '       <label><input type="radio" name="source" value="netease" checked=""> 网易云</label>' + 
-    '       <label><input type="radio" name="source" value="tencent"> QQ</label>' + 
-    '       <label><input type="radio" name="source" value="xiami"> 虾米</label>' + 
-    '       <label><input type="radio" name="source" value="kugou"> 酷狗</label>' + 
-    '       <label><input type="radio" name="source" value="baidu"> 百度</label>' + 
     '   </div>' + 
     '</div></form>';
     layer.open({
@@ -440,7 +436,7 @@ function changeCover(music) {
     }
     
     if(img == "err") {
-        img = "images/player_cover.png";
+        img = "//cdn.jsdelivr.net/gh/saigaocy/music/images/player_cover.png";
     } else {
         if(mkPlayer.mcoverbg === true && rem.isMobile)      // 移动端封面
         {    
@@ -667,7 +663,7 @@ function refreshList() {
 // 添加一个歌单
 // 参数：编号、歌单名字、歌单封面
 function addSheet(no, name, cover) {
-    if(!cover) cover = "images/player_cover.png";
+    if(!cover) cover = "//cdn.jsdelivr.net/gh/saigaocy/music/images/player_cover.png";
     if(!name) name = "读取中...";
     
     var html = '<div class="sheet-item" data-no="' + no + '">' +
@@ -841,7 +837,7 @@ function clearDislist() {
     musicList[rem.dislist].item.length = 0;  // 清空内容
     if(rem.dislist == 1) {  // 正在播放列表
         playerSavedata('playing', '');  // 清空本地记录
-        $(".sheet-item[data-no='1'] .sheet-cover").attr('src', 'images/player_cover.png');    // 恢复正在播放的封面
+        $(".sheet-item[data-no='1'] .sheet-cover").attr('src', '//cdn.jsdelivr.net/gh/saigaocy/music/images/player_cover.png');    // 恢复正在播放的封面
     } else if(rem.dislist == 2) {   // 播放记录
         playerSavedata('his', '');  // 清空本地记录
     }
